@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #434367, #131432, #252547);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    position: relative;
+    width: 90%; 
+    max-width: 360px; 
+    height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #222342;
+    border: 5px solid #36365a;
+    box-shadow: rgb(26, 26, 26) 0px 20px 30px -10px;
+    border-radius: 15px;
+}
+
+.stop-watch-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.stop-watch-container img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    margin-top: 10%;
+    width: 80%; 
+    max-width: 300px; 
+    height: auto; 
+}
+
+.stop-watch-container span {
+    z-index: 1;
+    position: relative;
+    top: 0;
+    margin-top: 15%;
+    font-size: 2em; 
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.start-btn {
+    width: 85%;
+    height: auto;
+    padding: 10px 16px;
+    border-radius: 5px;
+    font-size: 1em; 
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: black;
+    border: 3.5px solid rgba(128, 128, 128, 0.132);
+    cursor: pointer;
+    background: white;
+    transition: .3s ease;
+}
+
+.start-btn:hover {
+    border: 3.5px solid greenyellow;
+    background: greenyellow;
+    color: white;
+}
+
+.btn-flow {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-stop, .btn-reset {
+    width: 45%;
+    height: auto;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1em; 
+    font-weight: 600;
+    transition: .3s ease;
+    letter-spacing: 2px;
+    color: gray;
+    cursor: pointer;
+    border: 3px solid rgba(128, 128, 128, 0.132);
+    background: rgba(128, 128, 128, 0.132);
+}
+
+.btn-stop:hover {
+    border: 3px solid rgb(255, 47, 47);
+    background: rgb(255, 47, 47);
+    color: white;
+}
+
+.btn-reset:hover {
+    border: 3px solid white;
+    background: rgb(64, 109, 255);
+    color: white;
+}
+
+h1 {
+    margin-right: 20%;
+    font-size: 2em; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 700;
+    background-color: rgba(128, 128, 128, 0.09);
+    padding: 10px 30px 10px 20px;
+    border-radius: 8px;
+}
+
+.lap-count {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin-top: 5%;
+    background-color: rgba(128, 128, 128, 0.064);
+    width: 80%; 
+    max-width: 300px; 
+    height: 400px;
+    overflow-y: scroll;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding-block: 15px;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.lap-count::-webkit-scrollbar {
+    margin-right: 10px;
+    width: 5px; 
+}
+
+.lap-item {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 2px solid orange;
+    padding: 12px 30px;
+    border-radius: 5px;
+}
+
+.lap-count::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5); 
+    border-radius: 5px; 
+}
+
+.lap-count::-webkit-scrollbar-track {
+   display: hidden;
+}
+
+.lap-id {
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1em ; 
+    margin-right: 40px;
+}
+
+.lap-time {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1em; 
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        height: 75%;
+        flex-wrap: wrap;
+    }
+    .container {
+        width: 85%;
+        height: 60vh;
+    }
+    
+    h1 {
+        margin-right: 10%; 
+    }
+
+    .lap-count {
+        height: 350px; 
+    }
+}
